@@ -1,0 +1,48 @@
+{
+  "$schema": "https://v2.tauri.app/schemas/desktop-schema.json",
+  "productName": "Valorant BGM Player",
+  "version": "1.0.0",
+  "identifier": "com.valorant.bgm.player",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:5173",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "Valorant BGM Player",
+        "width": 1200,
+        "height": 800,
+        "resizable": true,
+        "fullscreen": false,
+        "visible": true,
+        "decorations": true,
+        "transparent": false,
+        "alwaysOnTop": false,
+        "skipTaskbar": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "icon": [
+      "icons/icon.ico"
+    ],
+    "resources": {
+      "resources/VB-CABLE_Installer.exe": "binaries/VB-CABLE_Installer.exe",
+      "resources/ffmpeg.exe": "binaries/ffmpeg.exe",
+      "resources/install_drivers.bat": "binaries/install_drivers.bat",
+      "resources/douyin-api-server.exe": "binaries/douyin-api-server.exe"
+    }
+  },
+  "plugins": {
+    "dialog": null
+  }
+}

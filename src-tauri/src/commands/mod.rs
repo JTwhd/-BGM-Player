@@ -1,0 +1,10 @@
+pub mod audio_cmd;
+pub mod config_cmd;
+pub mod ai_cmd;
+pub mod hotkey;
+pub mod clipper_cmd;
+pub mod file_dialog_cmd;
+pub mod virtual_mic_cmd;
+pub mod activation_cmd;
+pub mod driver_cmd;
+pub mod douyin_cmd;
